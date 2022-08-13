@@ -1,0 +1,14 @@
+<button type="button" (click)="setIsDisable()" class="btn btn-primary my-3"> 
+    {{isDisable? "Ocultar": "Mostrar"}}
+</button>
+
+<div class="card" style="width: 18rem;" *ngIf="isDisable">
+    <div class="text-center p-3">
+        <h5 class="card-title">Listado de cursos</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let curse of listCurses">
+            {{curse}}
+        </li>
+    </ul>
+</div>
